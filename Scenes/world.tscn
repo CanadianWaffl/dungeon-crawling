@@ -1,0 +1,109 @@
+[gd_scene format=4 uid="uid://22tehrfgwjr3"]
+
+[ext_resource type="Texture2D" uid="uid://c45tphr1052ue" path="res://Assets/Sprites/ts_walls.png" id="1_a02cp"]
+[ext_resource type="Texture2D" uid="uid://dh3x2lv6e7qha" path="res://Assets/Sprites/ts_floor.png" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://bqphue87freis" path="res://Scenes/player.tscn" id="3_5a7ea"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go701"]
+texture = ExtResource("1_a02cp")
+texture_region_size = Vector2i(32, 32)
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/left_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/left_side = 0
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSet" id="TileSet_lvvmh"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 2
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Border Walls"
+terrain_set_0/terrain_0/color = Color(0.2122027, 0.36678225, 0.69925463, 1)
+sources/0 = SubResource("TileSetAtlasSource_go701")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a7ea"]
+texture = ExtResource("2_go701")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/probability = 0.7
+1:0/0 = 0
+1:0/0/probability = 0.1
+0:1/0 = 0
+0:1/0/probability = 0.1
+1:1/0 = 0
+1:1/0/probability = 0.1
+
+[sub_resource type="TileSet" id="TileSet_2hhnk"]
+tile_size = Vector2i(32, 32)
+sources/5 = SubResource("TileSetAtlasSource_5a7ea")
+
+[node name="World" type="Node2D" unique_id=1644802415]
+
+[node name="BorderTiles" type="TileMapLayer" parent="." unique_id=565844209]
+tile_map_data = PackedByteArray("AAAEAAgAAAABAAIAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAIAAAABAAgAAAABAAIAAAACAAgAAAABAAIAAAADAAgAAAABAAIAAAAFAAgAAAABAAIAAAAGAAgAAAABAAIAAAAIAAgAAAACAAIAAAAIAAIAAAACAAEAAAAIAAMAAAACAAEAAAAIAAQAAAACAAEAAAAIAAUAAAACAAEAAAAIAAYAAAACAAEAAAAIAAcAAAACAAEAAAAIAAAAAAACAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAHAAAAAAABAAAAAAAHAAgAAAABAAIAAAAIAAEAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_lvvmh")
+
+[node name="FloorTiles" type="TileMapLayer" parent="." unique_id=629964330]
+tile_map_data = PackedByteArray("AAABAAEABQAAAAAAAAACAAEABQAAAAEAAAADAAEABQAAAAAAAAAEAAEABQABAAEAAAAFAAEABQAAAAAAAAAGAAEABQAAAAAAAAAHAAEABQAAAAAAAAAHAAIABQAAAAAAAAAGAAIABQABAAEAAAAFAAIABQAAAAAAAAAEAAIABQAAAAAAAAADAAIABQAAAAAAAAACAAIABQAAAAAAAAABAAIABQAAAAEAAAABAAMABQAAAAAAAAACAAMABQABAAEAAAADAAMABQAAAAAAAAAEAAMABQABAAAAAAAFAAMABQAAAAAAAAAGAAMABQAAAAAAAAAHAAMABQAAAAAAAAAHAAQABQABAAAAAAAGAAQABQAAAAAAAAAFAAQABQABAAEAAAAEAAQABQAAAAAAAAADAAQABQAAAAAAAAACAAQABQAAAAEAAAABAAQABQAAAAAAAAABAAUABQAAAAAAAAACAAUABQAAAAAAAAADAAUABQAAAAAAAAAEAAUABQAAAAAAAAAFAAUABQAAAAAAAAAGAAUABQAAAAAAAAAHAAUABQAAAAAAAAAHAAYABQAAAAAAAAAGAAYABQAAAAEAAAAFAAYABQAAAAAAAAAEAAYABQABAAAAAAADAAYABQAAAAAAAAACAAYABQAAAAAAAAABAAYABQAAAAEAAAABAAcABQAAAAAAAAACAAcABQAAAAAAAAADAAcABQAAAAAAAAAEAAcABQAAAAAAAAAFAAcABQAAAAAAAAAGAAcABQAAAAAAAAAHAAcABQAAAAAAAAA=")
+tile_set = SubResource("TileSet_2hhnk")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=2011580565]
+layer = -5
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1686687066]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19607843, 0.3254902, 0.37254903, 1)
+
+[node name="Player" parent="." unique_id=1626876331 instance=ExtResource("3_5a7ea")]
+position = Vector2(112, 80)

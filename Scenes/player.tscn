@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bqphue87freis"]
+
+[ext_resource type="Script" uid="uid://b4brgcpj4och8" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://bdf2lqxqrfdom" path="res://Assets/Sprites/adventurer.png" id="1_v0iea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvvmh"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1626876331]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565961603]
+texture = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1322955749]
+visible = false
+shape = SubResource("RectangleShape2D_lvvmh")
+
+[node name="MoveRayUp" type="RayCast2D" parent="." unique_id=1678018026]
+visible = false
+position = Vector2(0, -16)
+target_position = Vector2(0, -16)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="MoveRayLeft" type="RayCast2D" parent="." unique_id=1806787910]
+visible = false
+position = Vector2(-16, 0)
+target_position = Vector2(-16, 0)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="MoveRayDown" type="RayCast2D" parent="." unique_id=2129500618]
+visible = false
+position = Vector2(0, 16)
+target_position = Vector2(0, 16)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="MoveRayRight" type="RayCast2D" parent="." unique_id=2061461346]
+visible = false
+position = Vector2(16, 0)
+target_position = Vector2(16, 0)
+collision_mask = 2
+hit_from_inside = true
