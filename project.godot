@@ -15,6 +15,10 @@ run/main_scene="uid://22tehrfgwjr3"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/Sprites/icon.svg"
 
+[autoload]
+
+Helper="*uid://voufk7nn5l87"
+
 [display]
 
 window/size/viewport_width=512
@@ -60,7 +64,9 @@ down={
 
 [layer_names]
 
+2d_physics/layer_1="Player"
 2d_physics/layer_2="Wall"
+2d_physics/layer_3="Interactible"
 
 [physics]
 

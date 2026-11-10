@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://2dswfi2d3dfd"]
+
+[ext_resource type="FontFile" uid="uid://p5ogp1yby2i2" path="res://Assets/Fonts/Cairopixel.ttf" id="1_p4jr5"]
+
+[resource]
+default_font = ExtResource("1_p4jr5")
+default_font_size = 24
